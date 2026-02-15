@@ -38,4 +38,4 @@ Our services are not intended for children under the age of 13. We do not knowin
 
 ## 7. Contact Us
 If you have questions about this Privacy Policy, please contact us at:
-**Email:** [Your Support Email Here]
+**Email:** unitcare.help@outlook.com
