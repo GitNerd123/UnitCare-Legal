@@ -5,54 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UnitCare - Legal & Privacy</title>
     <style>
-        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #e2e8f0; background: #020617; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #fff; letter-spacing: 4px; border-bottom: 2px solid #6366f1; padding-bottom: 10px; }
-        h2 { color: #818cf8; margin-top: 40px; }
-        .card { background: #0f172a; padding: 25px; border-radius: 16px; border: 1px solid #1e293b; margin: 20px 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #e2e8f0; background: #020617; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 { color: #fff; letter-spacing: 4px; border-bottom: 2px solid #6366f1; padding-bottom: 10px; font-weight: 900; }
+        h2 { color: #818cf8; margin-top: 40px; font-weight: 800; border-left: 4px solid #6366f1; padding-left: 15px; }
+        h3 { color: #fff; margin-top: 25px; font-size: 1.1em; }
+        .card { background: #0f172a; padding: 25px; border-radius: 20px; border: 1px solid #1e293b; margin: 20px 0; }
         .highlight { color: #6366f1; font-weight: bold; }
-        a { color: #6366f1; text-decoration: none; }
+        a { color: #6366f1; text-decoration: none; font-weight: 600; }
         a:hover { text-decoration: underline; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
-        .footer { margin-top: 50px; font-size: 0.8em; color: #64748b; text-align: center; }
+        .footer { margin-top: 50px; font-size: 0.8em; color: #475569; text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; }
+        .badge { background: #6366f1; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; vertical-align: middle; margin-left: 10px; }
     </style>
 </head>
 <body>
 
     <h1>UNITCARE</h1>
+    <p>Official Legal Documents <span class="badge">v1.0.4</span></p>
     <p>Last Updated: February 2026</p>
 
-    <div id="deletion" class="card">
-        <h2>Account Deletion & Data Removal</h2>
-        <p>We value your privacy. If you wish to delete your <span class="highlight">UnitCare</span> account and all associated data, you have two options:</p>
+    <div class="card">
+        <h2>1. Subscription Terms (UnitCare Pro)</h2>
+        <p>UnitCare offers a monthly "Pro" subscription. By subscribing, you agree to the following:</p>
         <ul>
-            <li><strong>In-App:</strong> Open UnitCare and navigate to <span class="highlight">Settings > Account > Delete Account</span>. This will trigger an immediate purge of your records.</li>
-            <li><strong>Web Request:</strong> If you have already uninstalled the app, email your request to <a href="mailto:unitcare.help@outlook.com">unitcare.help@outlook.com</a>.</li>
+            <li><strong>Billing:</strong> Payments are processed via the Apple App Store or Google Play Store.</li>
+            <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current period.</li>
+            <li><strong>Management:</strong> You can manage or cancel your subscription at any time within your Store Account settings.</li>
+            <li><strong>Refunds:</strong> All refunds are handled directly by the respective App Store, not by UnitCare.</li>
         </ul>
-        <p><strong>What gets deleted?</strong> Upon request, your account profile, all property records, maintenance tickets, and uploaded images are permanently deleted from our servers within 30 days.</p>
+    </div>
+
+    <div id="deletion" class="card">
+        <h2>2. Account Deletion & Data Removal</h2>
+        <p>We believe your data belongs to you. To delete your account:</p>
+        <ul>
+            <li><strong>In-App:</strong> Navigate to <span class="highlight">Settings > Account Actions > Delete Account</span>. This is an immediate, permanent purge.</li>
+            <li><strong>Via Email:</strong> Contact <a href="mailto:unitcare.help@outlook.com">unitcare.help@outlook.com</a> from your registered email address.</li>
+        </ul>
+        <p><strong>Note:</strong> Deleting your account does <u>not</u> automatically cancel a paid subscription. You must cancel that through your Store settings first.</p>
     </div>
 
     <div id="privacy">
-        <h2>Privacy Policy</h2>
-        <p>UnitCare is designed to be a private, professional tool for property management. Here is how we handle your data:</p>
+        <h2>3. Privacy Policy (Worldwide)</h2>
+        <p>UnitCare facilitates communication between Landlords and Tenants. We comply with GDPR, UK GDPR, and CCPA standards.</p>
         
-        <h3>1. Data We Collect</h3>
-        <p>We collect only what is necessary to run the service:</p>
+        <h3>Data Collection</h3>
         <ul>
-            <li><strong>Account Info:</strong> Email address for login and authentication via Supabase.</li>
-            <li><strong>Property Data:</strong> Addresses and unit names provided by you.</li>
-            <li><strong>Maintenance Data:</strong> Photos and text descriptions of property issues.</li>
+            <li><strong>Authentication:</strong> Email addresses via Supabase Auth.</li>
+            <li><strong>User Content:</strong> Property addresses, maintenance photos, and tenant names provided during report submission.</li>
+            <li><strong>Payment Data:</strong> We do not see or store your credit card info; this is handled by RevenueCat and the App Stores.</li>
         </ul>
 
-        <h3>2. How We Use Data</h3>
-        <p>Your data is used solely to provide the core functionality of the app. We do not sell your data, and we do not use it for advertising.</p>
+        <h3>How We Use Data</h3>
+        <p>Your data is used strictly to provide maintenance tracking. We do not sell your data. We do not track your location.</p>
 
-        <h3>3. Security</h3>
-        <p>All data is stored on encrypted servers managed by Supabase. Images are stored in secure buckets. We use industry-standard SSL/TLS encryption for all data in transit.</p>
+        <h3>Security</h3>
+        <p>Data is stored on encrypted servers (Supabase/AWS). Photos are stored in secure buckets. We use SSL/TLS encryption for all data transfers.</p>
+    </div>
+
+    <div class="card">
+        <h2>4. Terms of Use (EULA)</h2>
+        <p>By using UnitCare, you agree that:</p>
+        <ul>
+            <li>You will not use the service for any illegal activities or to harass tenants/landlords.</li>
+            <li>You are responsible for the accuracy of the property data you enter.</li>
+            <li>UnitCare is a tool for management and is not liable for the actual physical condition of properties or repairs.</li>
+        </ul>
     </div>
 
     <div class="footer">
-        © 2026 UnitCare. Developed by GitNerd123
+        © 2026 UnitCare. Developed by GitNerd123<br>
+        Built for Landlords, Trusted by Tenants.
     </div>
 
 </body>
