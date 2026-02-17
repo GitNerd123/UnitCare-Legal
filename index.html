@@ -6,7 +6,7 @@
     <title>UnitCare - Legal & Privacy</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #e2e8f0; background: #020617; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { color: #fff; letter-spacing: 4px; border-bottom: 2px solid #6366f1; padding-bottom: 10px; font-weight: 900; }
+        h1 { color: #fff; letter-spacing: 4px; border-bottom: 2px solid #6366f1; padding-bottom: 10px; font-weight: 900; margin-bottom: 5px; }
         h2 { color: #818cf8; margin-top: 40px; font-weight: 800; border-left: 4px solid #6366f1; padding-left: 15px; }
         h3 { color: #fff; margin-top: 25px; font-size: 1.1em; }
         .card { background: #0f172a; padding: 25px; border-radius: 20px; border: 1px solid #1e293b; margin: 20px 0; }
@@ -15,52 +15,80 @@
         a:hover { text-decoration: underline; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; color: #94a3b8; font-size: 0.9em; }
+        th { text-align: left; padding: 12px; border-bottom: 2px solid #1e293b; color: #fff; }
+        td { padding: 12px; border-bottom: 1px solid #1e293b; }
         .footer { margin-top: 50px; font-size: 0.8em; color: #475569; text-align: center; border-top: 1px solid #1e293b; padding-top: 20px; }
         .badge { background: #6366f1; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.7em; vertical-align: middle; margin-left: 10px; }
+        .version-text { color: #475569; font-size: 0.9em; margin-bottom: 30px; }
     </style>
 </head>
 <body>
 
     <h1>UNITCARE</h1>
-    <p>Google Play Compliance <span class="badge">v1.0.4</span></p>
-    <p>Last Updated: February 2026</p>
+    <div class="version-text">
+        Google Play Compliance <span class="badge">v1.0.4</span><br>
+        Last Updated: February 2026
+    </div>
 
     <div id="deletion" class="card">
         <h2>1. Account Deletion & Data Safety</h2>
-        <p>In accordance with Google Play's Data Safety policies, we provide a clear path for data removal:</p>
+        <p>In accordance with Google Play's Data Safety requirements, we provide a permanent and transparent path for data removal:</p>
         <ul>
-            <li><strong>In-App Deletion:</strong> Go to <span class="highlight">Settings > Account Actions > Delete Account</span>. This immediately deletes your profile, properties, tickets, and photos from our active database.</li>
-            <li><strong>Manual Request:</strong> If you cannot access the app, email <a href="mailto:unitcare.help@outlook.com">unitcare.help@outlook.com</a>. We will process your deletion request within 48 hours.</li>
+            <li><strong>In-App Deletion:</strong> Users may navigate to <span class="highlight">Settings > Account Actions > Delete Account</span>. This action immediately and permanently scrubs your user profile, all registered properties, active tickets, and associated photos from our production database.</li>
+            <li><strong>Manual Request:</strong> If you cannot access the application, please email <a href="mailto:unitcare.help@outlook.com">unitcare.help@outlook.com</a>. Requests are verified and processed within 48 hours.</li>
+            <li><strong>Data Scrubbing:</strong> Once an account is deleted, we do not retain any personal data, except for anonymized transaction identifiers required for tax and financial auditing.</li>
         </ul>
     </div>
 
     <div class="card">
-        <h2>2. Subscription Terms (Google Play)</h2>
-        <p>UnitCare Pro is billed as a monthly recurring subscription via the Google Play Store.</p>
+        <h2>2. Subscription Terms</h2>
+        <p>UnitCare Pro is billed as a monthly recurring subscription via the Google Play Store (and Apple App Store where applicable).</p>
         <ul>
-            <li><strong>Auto-Renewal:</strong> Your subscription will automatically renew unless cancelled via the Google Play Store at least 24 hours before the end of the current period.</li>
-            <li><strong>Cancellation:</strong> You can cancel at any time by opening the <span class="highlight">Google Play Store > Menu > Subscriptions</span>.</li>
-            <li><strong>Refunds:</strong> Refunds are processed according to Google Play’s standard refund policies.</li>
+            <li><strong>Auto-Renewal:</strong> Subscriptions renew automatically unless cancelled at least 24 hours before the end of the current billing cycle.</li>
+            <li><strong>Management:</strong> You can manage or cancel your subscription at any time via your device's Store Settings (Subscriptions).</li>
+            <li><strong>Refunds:</strong> All financial transactions are handled by the respective app stores. Please contact Store Support for refund inquiries.</li>
         </ul>
     </div>
 
-    <div id="privacy">
-        <h2>3. Privacy Policy</h2>
-        <p>We collect and process the following data to provide maintenance services:</p>
+    <div id="privacy" class="card">
+        <h2>3. Privacy Policy & Data Collection</h2>
+        <p>We are committed to data minimization. We only collect data necessary to facilitate maintenance tracking.</p>
         
-        <h3>Personal Information</h3>
-        <ul>
-            <li><strong>Landlords:</strong> Email address (login) and Emergency Contact number.</li>
-            <li><strong>Tenants:</strong> Names and Issue Descriptions provided during the report process.</li>
-        </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data Category</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="highlight">User Email</span></td>
+                    <td>Account authentication and critical system alerts.</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Phone Number</span></td>
+                    <td>Optional emergency contact for property managers.</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Images / Photos</span></td>
+                    <td>Maintenance issue documentation (Stored in private buckets).</td>
+                </tr>
+                <tr>
+                    <td><span class="highlight">Financial Info</span></td>
+                    <td>Processed by Google Play. We do not store credit card numbers.</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h3>Storage & Security</h3>
-        <p>All data is stored on encrypted cloud servers (Supabase). Images are stored in secure private buckets. We use SSL encryption for all data transmission. We <strong>do not</strong> sell your data to third parties.</p>
+        <p>All data is transmitted via SSL encryption and stored on encrypted cloud servers (Supabase). We <strong>do not</strong> sell user data or share it with third-party advertisers.</p>
     </div>
 
     <div class="card">
-        <h2>4. User Content & Ethics</h2>
-        <p>By using UnitCare, you agree not to upload illegal, offensive, or malicious content. Landlords are responsible for ensuring they have the right to store property data for their specific region.</p>
+        <h2>4. User Conduct</h2>
+        <p>Users agree not to upload content that is illegal, defamatory, or infringing on privacy rights. UnitCare reserves the right to terminate accounts that violate these terms.</p>
     </div>
 
     <div class="footer">
